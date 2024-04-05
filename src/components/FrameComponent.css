@@ -1,0 +1,130 @@
+.vegetarian-icon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border-radius: var(--br-mini);
+  object-fit: cover;
+}
+.vegetarian {
+  flex: 1;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  display: inline-block;
+  min-width: 64px;
+}
+.dietaryrestrictedlabel {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 var(--padding-12xs) 0 0;
+}
+.vegetarianlabel {
+  height: 87px;
+  flex: 0.9028;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 var(--padding-6xs) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-4xs);
+}
+.dietary-restricted-icon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border-radius: var(--br-mini);
+  object-fit: cover;
+}
+.dietary-restricted {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+}
+.dietary-restricted-parent {
+  align-self: stretch;
+  flex: 0.9143;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 var(--padding-7xs) 0 0;
+  gap: var(--gap-lg);
+}
+.athletes-icon {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  border-radius: var(--br-mini);
+  object-fit: cover;
+}
+.athletes-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-11xs);
+}
+.athletes {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+}
+.athletes-special {
+  height: 87px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-4xs);
+}
+.special-icon {
+  height: 60px;
+  width: 58px;
+  position: relative;
+  border-radius: var(--br-mini);
+  object-fit: cover;
+}
+.special-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-10xs);
+}
+.special {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+}
+.athletes-special1,
+.athletescontainer {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.athletes-special1 {
+  height: 87px;
+  flex-direction: column;
+  gap: var(--gap-4xs);
+}
+.athletescontainer {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 var(--padding-10xs) 0 0;
+  gap: var(--gap-xl);
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray);
+  font-family: var(--font-inter);
+}

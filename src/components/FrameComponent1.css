@@ -1,0 +1,129 @@
+.strawberry-icon {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  border-radius: var(--br-mini);
+  object-fit: cover;
+}
+.strawberrycereals {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-11xs);
+}
+.fruits {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+}
+.fruits-vegetables-meats {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-2xs);
+}
+.vegetables-icon {
+  width: 59px;
+  height: 60px;
+  position: relative;
+  border-radius: var(--br-mini);
+  object-fit: cover;
+}
+.vegetables {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  display: inline-block;
+  min-width: 65px;
+}
+.fruits-vegetables-meats1 {
+  align-self: stretch;
+  flex: 0.9155;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 var(--padding-7xs) 0 0;
+  gap: var(--gap-2xs);
+}
+.meats-icon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border-radius: var(--br-mini);
+  object-fit: cover;
+}
+.meats {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+}
+.fruits-vegetables-meats2 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-2xs);
+}
+.cereals-icon {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  border-radius: var(--br-mini);
+  object-fit: cover;
+}
+.cereals-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 var(--padding-12xs) 0 var(--padding-10xs);
+}
+.cereals {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+}
+.fruits-vegetables-meats3 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-2xs);
+}
+.frame-wrapper2,
+.fruits-vegetables-meats-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.fruits-vegetables-meats-parent {
+  flex: 1;
+  gap: var(--gap-2xl);
+}
+.frame-wrapper2 {
+  height: 89px;
+  padding: 0 0 0 var(--padding-6xs);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray);
+  font-family: var(--font-inter);
+}

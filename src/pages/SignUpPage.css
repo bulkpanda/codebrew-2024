@@ -1,0 +1,281 @@
+.back1,
+.sign-up1 {
+  position: relative;
+  letter-spacing: -0.02em;
+}
+.back1 {
+  width: 59px;
+  line-height: 23px;
+  font-weight: 600;
+  display: inline-block;
+}
+.sign-up1 {
+  margin: 0;
+  flex: 1;
+  font-size: inherit;
+  line-height: 48px;
+  font-style: italic;
+  font-weight: 800;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.sign-up-label {
+  width: 175px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-sm);
+  box-sizing: border-box;
+  font-size: 40px;
+}
+.first-name {
+  width: 123px;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 23px;
+  display: inline-block;
+  font-weight: 600;
+}
+.joa {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-10xs);
+  background-color: var(--color-white);
+  border: 0 solid var(--color-black);
+}
+.first-name-parent {
+  align-self: stretch;
+  height: 57px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.bao,
+.last-name {
+  position: relative;
+}
+.last-name {
+  width: 123px;
+  letter-spacing: -0.02em;
+  line-height: 23px;
+  display: inline-block;
+  font-weight: 600;
+}
+.bao {
+  align-self: stretch;
+  flex: 1;
+  border-radius: var(--br-10xs);
+  background-color: var(--color-white);
+  border: 0 solid var(--color-black);
+}
+.last-name-parent {
+  align-self: stretch;
+  height: 57px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.email1 {
+  width: 123px;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 23px;
+  display: inline-block;
+  font-weight: 600;
+}
+.shape-with-text2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-10xs);
+  background-color: var(--color-white);
+  border: 0 solid var(--color-black);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.input-area {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  font-weight: 500;
+  display: inline-block;
+  width: 130px;
+  height: 23.5px;
+  z-index: 1;
+}
+.shape-with-text-container {
+  align-self: stretch;
+  height: 34px;
+  position: relative;
+  font-size: var(--font-size-xl);
+}
+.email-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.password1 {
+  width: 123px;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 23px;
+  display: inline-block;
+  font-weight: 600;
+}
+.shape-with-text3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-10xs);
+  background-color: var(--color-white);
+  border: 0 solid var(--color-black);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.input-markers {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  font-weight: 500;
+  display: inline-block;
+  width: 130px;
+  height: 23.5px;
+  z-index: 1;
+}
+.confirm-pswd {
+  align-self: stretch;
+  height: 34px;
+  position: relative;
+  font-size: var(--font-size-xl);
+}
+.password-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.re-enter-password {
+  width: 149px;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 23px;
+  display: inline-block;
+  font-weight: 600;
+}
+.shape-with-text4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-10xs);
+  background-color: var(--color-white);
+  border: 0 solid var(--color-black);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.div3 {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  font-weight: 500;
+  display: inline-block;
+  width: 130px;
+  height: 23.5px;
+  z-index: 2;
+}
+.shape-with-text-parent1 {
+  align-self: stretch;
+  height: 34px;
+  position: relative;
+  font-size: var(--font-size-xl);
+}
+.re-enter-password-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.password-area {
+  align-self: stretch;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+.password-area,
+.sign-up-label-parent,
+.sign-up-page-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sign-up-label-parent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+.sign-up-page-inner {
+  width: 311px;
+  flex-direction: row;
+  padding: 0 var(--padding-sm);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--font-size-mini);
+  color: var(--color-gray);
+  font-family: var(--font-inter);
+}
+.sign-up2 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-10xs);
+  background-color: var(--color-mediumseagreen);
+  max-width: 100%;
+  display: flex; /* Added to center the text */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.create-account-text {
+  color: white; /* Ensure good contrast */
+  font-size: 26px; /* Example size, adjust as needed */
+}
+.login-button {
+  align-self: stretch;
+  height: 48.8px;
+  flex-direction: row;
+  max-width: 100%;
+  cursor: pointer;
+}
+.sign-up-page {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-direction: column;
+  padding: 15px var(--padding-lg) 95.2px;
+  box-sizing: border-box;
+  gap: 25.5px;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray);
+  font-family: var(--font-inter);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}

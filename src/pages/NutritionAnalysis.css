@@ -1,0 +1,198 @@
+.information-part {
+  width: 360px;
+  height: 539px;
+  position: relative;
+  border-radius: var(--br-42xl);
+  background-color: var(--color-white);
+  border-right: 3px solid var(--color-black);
+  border-bottom: 8px solid var(--color-black);
+  border-left: 3px solid var(--color-black);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+}
+.nutrition1 {
+  margin: 0;
+}
+.nutrition {
+  margin: 0;
+  width: 121px;
+  height: 32px;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.calorie1 {
+  margin: 0;
+}
+.calorie,
+.fibre {
+  height: 65px;
+  width: 66px;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.fibre {
+  height: 55px;
+  width: 57px;
+}
+.calorie-parent {
+  width: 212px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.protein {
+  height: 65px;
+  width: 66px;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.fat1 {
+  margin: 0;
+}
+.fat {
+  align-self: stretch;
+  height: 65px;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.fat-wrapper,
+.protein-parent {
+  display: flex;
+  align-items: flex-start;
+}
+.fat-wrapper {
+  width: 66px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+  box-sizing: border-box;
+}
+.protein-parent {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.frame-parent {
+  flex: 1;
+  flex-direction: column;
+  gap: 78px;
+}
+.frame-parent,
+.frame-wrapper,
+.nutrition-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame-wrapper {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 0 var(--padding-4xl);
+  font-size: var(--font-size-smi-5);
+  color: var(--color-darkgray);
+}
+.nutrition-parent {
+  width: 244px;
+  flex-direction: column;
+  gap: 29px;
+  text-align: left;
+  font-size: 24px;
+  color: var(--color-gray);
+  font-family: var(--font-inter);
+}
+.vitamin1 {
+  margin: 0;
+}
+.carbohydrates,
+.vitamin {
+  height: 65px;
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.vitamin {
+  width: 66px;
+}
+.carbohydrates {
+  min-width: 91px;
+}
+.carbohydrates-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-10xs) 0 0;
+}
+.vitamin-parent {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.frame-container,
+.information-part-parent,
+.nutrition-analysis {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.frame-container {
+  width: 292px;
+  flex-direction: row;
+  padding: 0 var(--padding-4xl);
+}
+.information-part-parent,
+.nutrition-analysis {
+  background-color: var(--color-white);
+  flex-direction: column;
+}
+.information-part-parent {
+  border-radius: var(--br-42xl);
+  border-right: 3px solid var(--color-black);
+  border-bottom: 8px solid var(--color-black);
+  border-left: 3px solid var(--color-black);
+  padding: 22px 31px 93px;
+  gap: 85px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-smi-5);
+  color: var(--color-darkgray);
+  font-family: var(--font-inter);
+}
+.nutrition-analysis {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 var(--padding-lg);
+  gap: 13px;
+  letter-spacing: normal;
+}
