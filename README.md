@@ -30,7 +30,7 @@ NutriFlex is more than just an app; it's a lifestyle transformation tool that en
 NutriFlex also has a sector where it enables user to post and share their healthy lifestyle with the community and have a chance to compete with their peers on healthy lifestyle.
 
 ## How NutriFlex achieve it
-For the UI/UX we used Figma to design our app.
+For the UI/UX we used Figma to craft our Web Pages and Product Application from framing ideas to innovative designs. Themed with green, representing the healthy life. We also explored plugins with some communities, such as icon8, lightningCode, enhancing efficiency in creating.
 
 For the backend, we use Google Vision API for image labeling and GPT 3.5 API for nutrient information. The code are mainly written in Node.js and label
 selection part is written in python. 
@@ -55,6 +55,7 @@ help from artificial intelligence, we managed to deliver a functional webapp fro
 2) Deploy API and maintain artificial intelligence model.
 3) High pressure coding and debugging.
 4) The impact of modern technology can do to traditional social problems.
+5) Figma skills (with powerful functions inside the plugins)
 
 ## Future improvements
 1) More detailed product level food type database for a better food type detection.
@@ -62,7 +63,7 @@ help from artificial intelligence, we managed to deliver a functional webapp fro
 3) Deploy a fine-tuned image labeling model with specific training on food for better food labelling.
 4) More user customization option on physical information to create more in person nutrient suggestion.
 
-## Figma webpage
+## Figma for webpage & application design
 https://www.figma.com/file/SIcZVNTxvac2eCEhIybuNS/FOOD-APP?type=design&node-id=0-1&mode=design&t=4MSiolaG0jEb9kVC-0
 
 ## <a name="prevAndRun">Preview and Run the project</a>
