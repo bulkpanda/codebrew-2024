@@ -11,7 +11,6 @@ const UploadFiles: FunctionComponent = () => {
   async function uploadFileToServer(file: File): Promise<any> {
     const formData = new FormData();
     formData.append('image', file); // 'image' is the key expected by the server for the file
-  
     try {
       const response = await fetch('your-backend-endpoint/upload', {
         method: 'POST',
@@ -21,10 +20,10 @@ const UploadFiles: FunctionComponent = () => {
       if (!response.ok) {
         throw new Error(`Server responded with a status: ${response.status}`);
       }
-  
       const data = await response.json();
       return data;
-    } catch (error) {
+    } 
+    catch (error) {
       console.error("Error uploading file:", error);
       throw error; // Ensure errors can be caught where the function is called.
     }
@@ -35,14 +34,17 @@ const UploadFiles: FunctionComponent = () => {
   }, []);
   
   const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("file change function called")
     const file = event.target.files?.[0];
     if (!file) {
+      console.log("No file selected");
       return;
     }
     try {
-      await uploadFileToServer(file);
+      // await uploadFileToServer(file);
       navigate("/6-scanning-result");
-    } catch (error) {
+    } 
+    catch (error) {
       console.error("File upload failed", error);
     }
   };
@@ -51,13 +53,14 @@ const UploadFiles: FunctionComponent = () => {
     <div className="uploading-files">
       <FrameComponent2 />
       <section className="uploadbutton">
-      <input
-        type="file"
-        accept="image/*"
-        style={{ display: 'none' }}
-        ref={fileInputRef}
-        onChange={handleFileChange}
-      />
+        <input
+          type="file"
+          accept="image/*"
+          capture="environment"
+          style={{ display: 'none' }}
+          ref={fileInputRef}
+          onChange={handleFileChange}
+        />
         <img
           className="upload-food-files"
           loading="lazy"
