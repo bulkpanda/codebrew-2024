@@ -51,7 +51,6 @@ const UploadFiles: FunctionComponent = () => {
     <div className="uploading-files">
       <FrameComponent2 />
       <section className="uploadbutton">
-<<<<<<< HEAD
         {/* hidden */}
         <input
           type="file"
@@ -60,15 +59,6 @@ const UploadFiles: FunctionComponent = () => {
           onChange={handleFileChange}
           accept="image/*" 
           // capture 
-=======
-        <input
-          type="file"
-          accept="image/*"
-          capture="environment"
-          style={{ display: 'none' }}
-          ref={fileInputRef}
-          onChange={handleFileChange}
->>>>>>> 8d81b8beb461de5fb2bf9234bf8dbc40d351c9ee
         />
         <img
           className="upload-food-files"
