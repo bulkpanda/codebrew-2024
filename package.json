@@ -21,7 +21,22 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+
+    "install:frontend": "npm install",
+    "start:frontend": "npm start",
+    "build:frontend": "npm run build",
+    "test:frontend": "npm test",
+
+    "install:backend": "cd backend && npm install",
+    "start:backend": "cd backend && npm start",
+    "build:backend": "cd backend && npm run build",
+    "test:backend": "cd backend && npm test",
+
+    "install:concurrently": "concurrently \"npm run install:frontend\" \"npm run install:backend\"",
+    "start:concurrently": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
+    
+
   },
   "eslintConfig": {
     "root": true
