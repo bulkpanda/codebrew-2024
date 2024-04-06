@@ -5,7 +5,7 @@ import "./SignUpPage.css";
 const SignUpPage: FunctionComponent = () => {
   const navigate = useNavigate();
 
-  const onLogINBUTTONContainerClick = useCallback(() => {
+  const onSignUpButtonClick = useCallback(() => {
     navigate("/3-login-page");
   }, [navigate]);
 
@@ -18,43 +18,30 @@ const SignUpPage: FunctionComponent = () => {
             <h1 className="sign-up1">Sign Up</h1>
           </div>
           <div className="first-name-parent">
-            <i className="first-name">First name</i>
-            <div className="joa" />
+            <i className="field-label">First name</i>
+            <input type="name" id="nameInput" className="form-input" placeholder="Enter your first name" />
           </div>
           <div className="last-name-parent">
-            <i className="last-name">Last name</i>
-            <div className="bao" />
+            <i className="field-label">Last name</i>
+            <input type="name" id="nameInput" className="form-input" placeholder="Enter your last name" />
           </div>
           <div className="email-parent">
-            <i className="email1">Email</i>
-            <div className="shape-with-text-container">
-              <div className="shape-with-text2" />
-              <div className="input-area">******</div>
-            </div>
+            <i className="field-label">Email</i>
+            <input type="email" id="emailInput" className="form-input" placeholder="Enter your email" />
           </div>
           <div className="password-area">
             <div className="password-parent">
-              <i className="password1">Password</i>
-              <div className="confirm-pswd">
-                <div className="shape-with-text3" />
-                <div className="input-markers">******</div>
-              </div>
+              <i className="field-label">Password</i>
+              <input type="password" id="passwordInput" className="form-input" placeholder="Enter your password" />
             </div>
             <div className="re-enter-password-parent">
-              <i className="re-enter-password">Re-enter Password</i>
-              <div className="shape-with-text-parent1">
-                <div className="shape-with-text4" />
-                <div className="div3">******</div>
-              </div>
+              <i className="field-label">Confirm Password</i>
+              <input type="password" id="passwordInput" className="form-input" placeholder="Re-enter your password" />
             </div>
           </div>
         </div>
       </section>
-      <div className="login-button" onClick={onLogINBUTTONContainerClick}>
-        <div className="sign-up2">
-          <span className="create-account-text">Create Account</span>
-        </div>
-      </div>
+      <button type="submit" className="login-button" onClick={onSignUpButtonClick}>Create Account</button>
     </div>
   );
 };

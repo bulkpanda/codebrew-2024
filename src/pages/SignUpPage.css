@@ -29,10 +29,10 @@
   box-sizing: border-box;
   font-size: 40px;
 }
-.first-name {
-  width: 123px;
+.field-label {
+  width: 149px;
   position: relative;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   line-height: 23px;
   display: inline-block;
   font-weight: 600;
@@ -170,7 +170,7 @@
 .re-enter-password {
   width: 149px;
   position: relative;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   line-height: 23px;
   display: inline-block;
   font-weight: 600;
@@ -278,4 +278,14 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
