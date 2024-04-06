@@ -2,7 +2,7 @@
 
 Coded by Rooptop Coders in CodeBrew 2024.
 
-![public/screenshot-20240405-at-603-1@2x.png](public/screenshot-20240405-at-603-1@2x.png)
+![logo.jpg](logo.jpg)
 
 ## Inspiration
 In many parts of the world, particularly in developed countries such as Australia, 
