@@ -77,5 +77,3 @@ help from artificial intelligence, we managed to deliver a functional webapp fro
 1) Navigate to the **project root folder**
 2) Install dependencies: `npm install:backend`
 3) Run Backend Only and view it in browser: `npm run start:backend`
-
-## Challenges we ran into
