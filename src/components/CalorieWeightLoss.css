@@ -1,0 +1,207 @@
+.health-goals {
+    margin: 0;
+    width: 194px;
+    height: 32px;
+    position: relative;
+    font-size: inherit;
+    letter-spacing: -0.02em;
+    line-height: 150%;
+    display: inline-block;
+    font-style: italic;
+    font-weight: 700;
+    font-family: inherit;
+    flex-shrink: 0;
+  }
+  .information-part7 {
+    height: 40px;
+    width: 117px;
+    position: relative;
+    border-radius: var(--br-42xl);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-saddlebrown);
+    box-sizing: border-box;
+    display: none;
+  }
+  .weight-loss {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 13px;
+    display: inline-block;
+    font-weight: 700;
+    min-width: 91.5px;
+    z-index: 1;
+  }
+  .calorie3,
+  .information-part8 {
+    border-radius: var(--br-42xl);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-saddlebrown);
+  }
+  .calorie3 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-6xs) var(--padding-smi-3) var(--padding-xl)
+      var(--padding-sm-2);
+    white-space: nowrap;
+  }
+  .information-part8 {
+    height: 40px;
+    width: 124px;
+    position: relative;
+    box-sizing: border-box;
+    display: none;
+  }
+  .muscle-gain {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 13px;
+    display: inline-block;
+    font-weight: 700;
+    min-width: 97px;
+    z-index: 1;
+  }
+  .calorie4 {
+    border-radius: var(--br-42xl);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-saddlebrown);
+    padding: var(--padding-6xs) var(--padding-smi) var(--padding-xl)
+      var(--padding-sm);
+    white-space: nowrap;
+  }
+  .calorie4,
+  .daily-weekly-calories,
+  .daily-weekly-calories-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .daily-weekly-calories {
+    flex: 1;
+    gap: var(--gap-10xl);
+  }
+  .daily-weekly-calories-wrapper {
+    align-self: stretch;
+    padding: 0 0 0 var(--padding-smi);
+    font-size: var(--font-size-base);
+    color: var(--color-saddlebrown);
+  }
+  .information-part9 {
+    height: 40px;
+    flex: 1;
+    position: relative;
+    border-radius: var(--br-42xl);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-saddlebrown);
+    box-sizing: border-box;
+  }
+  .information-part-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 var(--padding-mini);
+  }
+  .information-part10 {
+    height: 40px;
+    flex: 1;
+    position: relative;
+    border-radius: var(--br-42xl);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-saddlebrown);
+    box-sizing: border-box;
+  }
+  .information-part-container {
+    width: 193px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-mini);
+    box-sizing: border-box;
+  }
+  .information-part11 {
+    height: 40px;
+    flex: 1;
+    position: relative;
+    border-radius: var(--br-42xl);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-saddlebrown);
+    box-sizing: border-box;
+  }
+  .information-part-frame {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-11xs) 0 var(--padding-smi);
+  }
+  .information-part12 {
+    height: 40px;
+    flex: 1;
+    position: relative;
+    border-radius: var(--br-42xl);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-saddlebrown);
+    box-sizing: border-box;
+  }
+  .information-part-wrapper1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-9xs) 0 var(--padding-2xs);
+  }
+  .information-part13 {
+    height: 40px;
+    flex: 1;
+    position: relative;
+    border-radius: var(--br-42xl);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-saddlebrown);
+    box-sizing: border-box;
+  }
+  .information-part-wrapper2 {
+    width: 197px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-mini);
+    box-sizing: border-box;
+  }
+  .information-part14 {
+    height: 40px;
+    flex: 1;
+    position: relative;
+    border-radius: var(--br-42xl);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-saddlebrown);
+    box-sizing: border-box;
+  }
+  .calorie-weight-loss,
+  .information-part-wrapper3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .information-part-wrapper3 {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 0 0 var(--padding-mini);
+  }
+  .calorie-weight-loss {
+    flex: 1;
+    flex-direction: column;
+    gap: var(--gap-3xs-1);
+    text-align: left;
+    font-size: var(--font-size-5xl);
+    color: var(--color-gray);
+    font-family: var(--font-inter);
+  }
+  
