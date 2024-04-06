@@ -21,58 +21,61 @@ const Social: FunctionComponent = () => {
     <div className="social">
       <main className="f-r-a-m-e-parent">
         <section className="f-r-a-m-e">
-          <header className="rectangle-parent">
-            <div className="frame-child" />
-            <img
-              className="search-icon"
-              loading="lazy"
-              alt=""
-              src="/search@2x.png"
-            />
-          </header>
-          <div className="add-male-user-group-wrapper">
-            <img
-              className="add-male-user-group"
-              loading="lazy"
-              alt=""
-              src="/add-male-user-group@2x.png"
-            />
+        <header className="rectangle-parent">
+          <div className="frame-child">
+            <input type="search" className="search-input" placeholder="Search..." />
+            <button className="search-button">
+              <img
+                className="search-icon"
+                loading="lazy"
+                alt="Search"
+                src="/search@2x.png"
+              />
+            </button>
           </div>
+        </header>
+
+        <div className="add-male-user-group-wrapper">
+          <img
+            className="add-male-user-group"
+            loading="lazy"
+            alt=""
+            src="/add-male-user-group@2x.png"
+          />
+        </div>
         </section>
         <section className="square-border">
-          <div className="rectangle-group">
-            <div className="frame-item" />
-            <div className="thumbs-up-parent">
-              <img
-                className="thumbs-up-icon"
-                loading="lazy"
-                alt=""
-                src="/thumbs-up@2x.png"
-              />
-              <img
-                className="thumbs-down-icon"
-                loading="lazy"
-                alt=""
-                src="/thumbs-down@2x.png"
-              />
-              <img
-                className="topic-icon"
-                loading="lazy"
-                alt=""
-                src="/topic@2x.png"
-              />
-            </div>
-            <div className="screenshot-2024-04-05-at-559-parent">
-              <img
-                className="screenshot-2024-04-05-at-5591"
-                loading="lazy"
-                alt=""
-                src="/screenshot-20240405-at-559-2@2x.png"
-              />
-              <div className="made-some-spaghetti-and-meatba-wrapper">
-                <div className="made-some-spaghetti">
+          <div className="square-border-inner">
+              <div className="rectangle-container">
+                <div className="frame-inner" />
+                <div className="screenshot-2024-04-05-at-559-group">
+                  <img
+                    className="screenshot-2024-04-05-at-5592"
+                    loading="lazy"
+                    alt=""
+                    src="/screenshot-20240405-at-559-2@2x.png"
+                  />
+                  <div className="content-text">
                   Made some spaghetti and meatballs. Healthy and funny looking
                   dish to maintain my protein...
+                  </div>
+                </div>
+                <div className="frame-wrapper">
+                  <div className="frame-parent1">
+                    <div className="thumbs-up-group">
+                      <img
+                        className="thumbs-up-icon1"
+                        loading="lazy"
+                        alt=""
+                        src="/thumbs-up@2x.png"
+                      />
+                      <img
+                        className="thumbs-down-icon1"
+                        alt=""
+                        src="/thumbs-down@2x.png"
+                      />
+                    </div>
+                  <img className="topic-icon1" alt="" src="/topic@2x.png" />
                 </div>
               </div>
             </div>
@@ -87,7 +90,7 @@ const Social: FunctionComponent = () => {
                   alt=""
                   src="/screenshot-20240405-at-559-2-1@2x.png"
                 />
-                <div className="finished-my-jogging">
+                <div className="content-text">
                   Finished my jogging session today. Feeling great...
                 </div>
               </div>
