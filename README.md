@@ -26,3 +26,26 @@ NutriFlex will let user know whether their nutrient intake is within a healthy r
 
 ## How NutriFlex achieve it
 For the UI/UX we used Figma to design our app.
+
+## <a name="prevAndRun">Preview and Run the project</a>
+### <a name="setupBackendENV">Setup Backend .env</a>
+1) Navigate to the **backend**
+2) Edit **.env** (Create one if not exist)
+
+
+### <a name="prevEntire">Entire Project</a>
+1) Navigate to the **project root folder**
+2) Install dependencies: `npm run install:concurrently`
+3) Run Entire project and view it in browser: `npm run start:concurrently`
+
+### <a name="prevFrontend">Frontend Only</a>
+1) Navigate to the **project root folder**
+2) Install dependencies: `npm install:frontend`
+3) Run Frontend Only and view it in browser: `npm run start:frontend`
+
+### <a name="prevBackend">Backend Only</a>
+1) Navigate to the **project root folder**
+2) Install dependencies: `npm install:backend`
+3) Run Backend Only and view it in browser: `npm run start:backend`
+
+## Challenges we ran into
