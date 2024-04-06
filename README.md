@@ -19,10 +19,15 @@ developed NutriFlex aiming to help users get to know their food, understanding w
 daily nutrient intake.
 
 ## What is NutriFlex
-NutriFlex is a webApp serving as a nutrient expert, it gives suggestions on your daily nutrient intake amount and also helps you keep tracking on the nutrient you eat.
-User just need to enter their physical information such as age, gender, weight and diet preference, and taking a picture on 
-their food, NutriFlex will detect the food type in the food photo and calculate the nutrient in it. Every meal's nutrition data will be stored in the app and by utilizing AI, 
-NutriFlex will let user know whether their nutrient intake is within a healthy range.
+NutriFlex is a revolutionary healthy Flexing product designed to help users bid farewell to illness, prevent diseases through dietary therapy, and embrace a life of enjoyment and well-being. Our app assists users in identifying and analyzing food ingredients to derive nutritional components such as calories, protein, fat, fiber, carbohydrates, water, vitamins, and minerals, enabling users to monitor their health indicators effectively. 
+
+The highlight of our product lies in its ability to cater to diverse user needs, particularly dietary-restricted individuals such as diabetes patients and those with food allergies. Once high sugar content or allergens are detected in food items, real-time alerts are automatically generated. Additionally, historical data is stored in a database, allowing for tracking on a weekly, monthly, or quarterly basis, and personalized services are provided as needed.
+
+Users can also customize their own dietary reports, empowering them to pursue their culinary desires boldly. Even for indulgent treats like desserts, we offer healthier ingredient alternatives while maintaining taste, ensuring zero burden on the body.
+
+NutriFlex is more than just an app; it's a lifestyle transformation tool that encourages users to enjoy a healthier, happier life through nutritious food choices. Join us in the journey towards a brighter, more vibrant future with NutriFlex.
+
+NutriFlex also has a sector where it enables user to post and share their healthy lifestyle with the community and have a chance to compete with their peers on healthy lifestyle.
 
 ## How NutriFlex achieve it
 For the UI/UX we used Figma to design our app.
@@ -56,6 +61,9 @@ help from artificial intelligence, we managed to deliver a functional webapp fro
 2) Deploy an offline database on nutrient of common food type to avoid unnecessary GPT API usage.
 3) Deploy a fine-tuned image labeling model with specific training on food for better food labelling.
 4) More user customization option on physical information to create more in person nutrient suggestion.
+
+## Figma webpage
+https://www.figma.com/file/SIcZVNTxvac2eCEhIybuNS/FOOD-APP?type=design&node-id=0-1&mode=design&t=4MSiolaG0jEb9kVC-0
 
 ## <a name="prevAndRun">Preview and Run the project</a>
 ### <a name="setupBackendENV">Setup Backend .env</a>
