@@ -11,9 +11,10 @@ import ScanningResult from "./pages/ScanningResult";
 import MainDisplay from "./pages/MainDisplay";
 import LOGINPAGE from "./pages/LOGINPAGE";
 import SignUpPage from "./pages/SignUpPage";
-import MainPage1 from "./pages/MainPage1";
+import MainPage1 from "./pages/UploadFiles";
 import Leaderboard from "./pages/Leaderboard";
 import Social from "./pages/Social";
+import CustomizePlanning from "./pages/CustomizePlanning";
 
 function App() {
   const action = useNavigationType();
@@ -86,6 +87,7 @@ function App() {
       <Route path="/5-uploading-files" element={<MainPage1 />} />
       <Route path="/leaderboard" element={<Leaderboard />} />
       <Route path="/social" element={<Social />} />
+      <Route path="/8-customize-planning" element={<CustomizePlanning />} />
     </Routes>
   );
 }
