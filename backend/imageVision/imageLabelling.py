@@ -51,5 +51,4 @@ def get_labels(path):
     result = set()
     detect_labels(path, result)
     localize_objects(path, result)
-    result_labels = set()
     return result

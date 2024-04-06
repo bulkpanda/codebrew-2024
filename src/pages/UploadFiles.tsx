@@ -5,7 +5,7 @@ import FrameComponent1 from "../components/FrameComponent1";
 import FrameComponent from "../components/FrameComponent";
 import "./UploadFiles.css";
 
-const MainPage1: FunctionComponent = () => {
+const UploadFiles: FunctionComponent = () => {
   const navigate = useNavigate();
   const fileInputRef = useRef<HTMLInputElement>(null);
   async function uploadFileToServer(file: File): Promise<any> {
@@ -78,4 +78,4 @@ const MainPage1: FunctionComponent = () => {
   );
 };
 
-export default MainPage1;
+export default UploadFiles;

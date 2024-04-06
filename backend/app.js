@@ -4,8 +4,8 @@ const cors = require("cors");
 const fs = require('fs');
 const vision = require('@google-cloud/vision');
 
-// require("dotenv").config();
-require("dotenv").config(".env.example");
+// require("dotenv").config(".env.development.local");
+require("dotenv").config();
 
 // multer
 const storage = multer.diskStorage({
@@ -85,27 +85,34 @@ app.post("/openAI", async (req, res) => {
 const googleVis_apiKey = process.env.googleVis_apiKey;
 const { spawn } = require('child_process');
 app.post('/googleVision', upload.single('image'), async (req, res) => {
-  // if (!req.file) {
-  //   return res.status(400).send('No image uploaded.');
-  // }
-  // const filePath = req.file.path;
-  // const visionClient = new vision.ImageAnnotatorClient({
-  //   keyFilename: googleVis_apiKey
-  // });
-  // const request = {
-  //   image: {content: fs.readFileSync(filePath)},
-  // };
+  // receiving files from user
+  if (!req.file) {
+    return res.status(400).send('No image uploaded.');
+  }
+  const filePath = req.file.path;
+  const visionClient = new vision.ImageAnnotatorClient({
+    keyFilename: googleVis_apiKey
+  });
+  const request = {
+    image: {content: fs.readFileSync(filePath)},
+  };
 
-  // const [result] = await visionClient.objectLocalization(request);
-  // const objects = result.localizedObjectAnnotations;
-  // // console.log(objects);
-  // let names = "";
-  // objects.forEach(object => {
-  //   names += object.name.toString();
-  //   names += "$"
-  // });
+  // sending files to googleVision
+  const [result] = await visionClient.objectLocalization(request);
+  const objects = result.localizedObjectAnnotations;
+  // console.log(objects);
+
+  // processing responses from googleVison to json format
+  let names = "";
+  objects.forEach(object => {
+    names += object.name.toString();
+    names += "$"
+  });
   
-  let names = 'Apple$Apple$Fruit$Fruit$Fruit$Fruit$Fruit$Peach$Orange$Orange$';
+  // testing response from googleVision
+  // let names = 'Apple$Apple$Fruit$Fruit$Fruit$Fruit$Fruit$Peach$Orange$Orange$';
+  // testing response from googleVision
+
   const pythonProcess = spawn('python', ['imageVision/readLabel.py'], {});
   pythonProcess.stdin.write(names);
   pythonProcess.stdin.end();
