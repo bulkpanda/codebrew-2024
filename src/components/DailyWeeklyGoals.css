@@ -1,0 +1,82 @@
+.information-part15 {
+    height: 58px;
+    width: 118px;
+    position: relative;
+    background-color: var(--color-mediumseagreen);
+    border: 2px solid var(--color-palegoldenrod-100);
+    box-sizing: border-box;
+    display: none;
+  }
+  .daily-goals {
+    height: 38px;
+    flex: 1;
+    position: relative;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .calorie5,
+  .information-part16 {
+    background-color: var(--color-mediumseagreen);
+    border: 2px solid var(--color-palegoldenrod-100);
+  }
+  .calorie5 {
+    flex: 0.9107;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-5xs) var(--padding-7xs) var(--padding-xs);
+    white-space: nowrap;
+  }
+  .information-part16 {
+    height: 58px;
+    width: 117px;
+    position: relative;
+    box-sizing: border-box;
+    display: none;
+  }
+  .weekly-goals {
+    height: 38px;
+    width: 112px;
+    position: relative;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    min-width: 112px;
+    z-index: 1;
+  }
+  .calorie6 {
+    flex: 1;
+    background-color: var(--color-mediumseagreen);
+    border: 2px solid var(--color-palegoldenrod-100);
+    padding: var(--padding-5xs) var(--padding-12xs) var(--padding-xs);
+    white-space: nowrap;
+  }
+  .calorie-group,
+  .calorie6,
+  .daily-weekly-goals {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .calorie-group {
+    flex: 1;
+    gap: var(--gap-14xl);
+  }
+  .daily-weekly-goals {
+    width: 338px;
+    padding: 0 var(--padding-16xl) var(--padding-12xl);
+    box-sizing: border-box;
+    max-width: 100%;
+    text-align: center;
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+    font-family: var(--font-inter);
+  }
+  
