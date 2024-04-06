@@ -3,7 +3,7 @@ import FrameComponent2 from "../components/FrameComponent2";
 import { useNavigate } from "react-router-dom";
 import FrameComponent1 from "../components/FrameComponent1";
 import FrameComponent from "../components/FrameComponent";
-import "./MainPage1.css";
+import "./UploadFiles.css";
 
 const MainPage1: FunctionComponent = () => {
   const navigate = useNavigate();
