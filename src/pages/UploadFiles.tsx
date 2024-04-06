@@ -32,7 +32,9 @@ const UploadFiles: FunctionComponent = () => {
         if (response.ok) {
           // uploading file success
           const data = await response.json();
-
+          sessionStorage.setItem('currentUserFoodList', JSON.stringify(data));
+          // const savedData = JSON.parse(sessionStorage.getItem('currentUserFoodList'));
+          
           console.log('Upload successful', data);
 
           navigate("/6-scanning-result");
