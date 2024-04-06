@@ -4,7 +4,11 @@ import "./ScanningResult.css";
 
 const ScanningResult: FunctionComponent = () => {
   const navigate = useNavigate();
-
+  // Retrieve the item from sessionStorage
+  const item = sessionStorage.getItem('currentUserFoodList');
+  // Check if the item is not null before parsing
+  const ingredientsList: String[] = item ? JSON.parse(item) : null;
+  // console.log(savedData);
   const onSubmitButtonClick = useCallback(() => {
     navigate("/3-nutrition-analysis");
   }, [navigate]);
@@ -19,19 +23,16 @@ const ScanningResult: FunctionComponent = () => {
             <b className="scanning-results1">Scanning results:</b>
             <div className="list-of-items">
               <b className="ingredients-fsf-fsdas-container">
-                <p className="ingredients">{`Ingredients: `}</p>
+                <p className="ingredients">Ingredients:</p>
                 <ol className="fsf-fsdas-tomato-apple">
-                  <li className="fsf">fsf</li>
-                  <li className="fsdas">fsdas</li>
-                  <li className="tomato">tomato</li>
-                  <li className="apple">apple</li>
-                  <li className="blank-line">&nbsp;</li>
+                  {ingredientsList.map((ingredient, index) => (
+                    <li key={index}>{ingredient}</li>
+                  ))}
                 </ol>
-                <p className="blank-line1">&nbsp;</p>
-                <p className="blank-line2">&nbsp;</p>
               </b>
             </div>
           </div>
+          
           <div className="confirmation-area">
             <div className="submit" onClick={onSubmitButtonClick}>
               <b className="submit1">Submit</b>
