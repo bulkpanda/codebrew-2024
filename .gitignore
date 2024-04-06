@@ -1,12 +1,16 @@
 
 # Dependencies
 /node_modules
-
+/backend/node_modules
 # Production
 /build
 
 # Misc
 .DS_Store
+googleAPIKey.json
+
+# .env Files
+.env
 .env.local
 .env.development.local
 .env.test.local
