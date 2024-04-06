@@ -5,6 +5,10 @@ import FrameComponent3 from "../components/FrameComponent3";
 import "./NutritionAnalysis.css";
 
 const NutritionAnalysis: FunctionComponent = () => {
+
+  // console.log(sessionStorage.getItem('currentUserFoodList'));
+  // console.log("safasfsadfasd")
+  // console.log(sessionStorage.getItem('gptAnswer'));
   const navigate = useNavigate();
 
   const onCustomizePlanningContainerClick = useCallback(() => {

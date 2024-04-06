@@ -8,8 +8,23 @@ const ScanningResult: FunctionComponent = () => {
   const item = sessionStorage.getItem('currentUserFoodList');
   // Check if the item is not null before parsing
   const ingredientsList: String[] = item ? JSON.parse(item) : null;
-  // console.log(savedData);
-  const onSubmitButtonClick = useCallback(() => {
+
+  
+  const onSubmitButtonClick = useCallback(async () => {
+    const url = 'http://127.0.0.1:8080/openAI';
+    const jsonList = JSON.stringify({ prompt: ingredientsList });
+    console.log(jsonList);
+    console.log("submit");
+    const gptAnswer = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: jsonList,
+    });
+    sessionStorage.setItem('gptAnswer', JSON.stringify(gptAnswer));
+
+
     navigate("/3-nutrition-analysis");
   }, [navigate]);
 

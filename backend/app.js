@@ -20,11 +20,13 @@ const upload = multer({ storage: storage });
 // multer
 
 // openai
-
 const OpenAIApi = require('openai');
 
-const openai = new OpenAIApi({ apiKey: process.env.openAI_apiKey });
+const openai = new OpenAIApi({
+  apiKey: process.env.openAI_apiKey // This is also the default, can be omitted
+});
 const openAIModel = process.env.openAI_model;
+
 
 // openai
 
@@ -48,40 +50,63 @@ app.use(
 );
 
 app.post("/openAI", async (req, res) => {
+    console.log("sadfasdfasfdfads");
+    console.log(req.body.prompt);
     const ourPrompt = req.body.prompt;
-
+    console.log(ourPrompt);
     const completePrompt = `
-    User's prompt: ${ourPrompt}.
-    Distinguish each food from user's promot. Then, for each food, list its primary nutrient, approximate nutrient amount. Your answer should be exclusively in JSON format with following properties:
-    {
-      foodName: string,
-      nutrient: string,
-
-    }
-  `;
-  const promptResponse = await openai.createChatCompletion({
+    User's prompt: "${ourPrompt}".
+    Analyze the provided prompt to identify each food item mentioned by the user. 
+    For each identified food item, compute or list the amount of nutrients it contains.
+    The units for measuring the nutrients are as follows: calories in kilocalories (kcal), carbohydrates in grams (g), proteins in grams (g), fats in grams (g), fiber in grams (g), vitamins and minerals in grams (g), and water in liters (L).
+    Return your answer exclusively in JSON. Adhering to the following structure and property names:
+    [
+      {
+        "food": "Name of the food item",
+        "nutrients": {
+          "calories": 0, // int
+          "carbohydrates": 0.0, // double
+          "proteins": 0.0, // double
+          "fats": 0.0, // double
+          "fiber": 0.0, // double
+          "vitaminsAndMinerals": 0.0, // double
+          "water": 0.0 // double
+        }
+      }
+      // Add more food items here if necessary
+    ]
+    Note: Replace the zeros with the actual nutrient amounts for each food item identified from the user's prompt.
+    `;
+  const chatCompletion = await openai.chat.completions.create({
     model: openAIModel,
     messages: [
       {
         role: "system",
-        content: "role: a knowledgeable assistant in any topic imaginable. Audience: high school and university students."
+        content: "role: a knowledgeable assistant in food science. Audience: high school and university students or other people."
       }, 
       {
         role: "user",
         content: completePrompt
       }],
-    temperature: 0.5,
+    temperature:0.5,
+    max_tokens:256,
+    top_p:1,
+    frequency_penalty:0,
+    presence_penalty:0
   });
-
-  console.log(promptResponse.data.choices[0].message);
+  console.log(chatCompletion.choices[0].message.content);
+  
+  const jsonContent = chatCompletion.choices[0].message.content.replace(/```json\n|```/g, '').trim();
+  console.log(jsonContent);
   try {
-    const parsedContent = JSON.parse(promptResponse.data.choices[0].message.content);
+    const parsedContent = JSON.parse(jsonContent);
     res.status(200).json(parsedContent);
   } catch (error) {
     console.error("Error parsing message content:", error);
     res.status(500).send("Failed to parse the message content");
   }
 });
+// curl -X POST http://localhost:8080/openAI -H "Content-Type: application/json" -d "[\"apple\", \"peach\", \"orange\"]"
 
 
 const googleVis_apiKey = process.env.googleVis_apiKey;
@@ -100,20 +125,20 @@ app.post('/googleVision', upload.single('image'), async (req, res) => {
   };
 
   // sending files to googleVision
-  // const [result] = await visionClient.objectLocalization(request);
-  // const objects = result.localizedObjectAnnotations;
-  // // console.log(objects);
+  const [result] = await visionClient.objectLocalization(request);
+  const objects = result.localizedObjectAnnotations;
+  // console.log(objects);
 
-  // // processing responses from googleVison to json format
-  // let names = "";
-  // objects.forEach(object => {
-  //   names += object.name.toString();
-  //   names += "$"
-  // });
+  // processing responses from googleVison to json format
+  let names = "";
+  objects.forEach(object => {
+    names += object.name.toString();
+    names += "$"
+  });
   
-  // testing response from googleVision
-  let names = 'Apple$Apple$Fruit$Fruit$Fruit$Fruit$Fruit$Peach$Orange$Orange$';
-  // testing response from googleVision
+  // // testing response from googleVision
+  // let names = 'Apple$Apple$Fruit$Fruit$Fruit$Fruit$Fruit$Peach$Orange$Orange$';
+  // // testing response from googleVision
 
   const pythonProcess = spawn('python', ['imageVision/readLabel.py'], {});
   pythonProcess.stdin.write(names);
