@@ -11,7 +11,7 @@ import ScanningResult from "./pages/ScanningResult";
 import MainDisplay from "./pages/MainDisplay";
 import LOGINPAGE from "./pages/LOGINPAGE";
 import SignUpPage from "./pages/SignUpPage";
-import MainPage1 from "./pages/UploadFiles";
+import UploadFiles from "./pages/UploadFiles";
 import Leaderboard from "./pages/Leaderboard";
 import Social from "./pages/Social";
 import CustomizePlanning from "./pages/CustomizePlanning";
@@ -84,7 +84,7 @@ function App() {
       <Route path="/4main-display" element={<MainDisplay />} />
       <Route path="/3-login-page" element={<LOGINPAGE />} />
       <Route path="/2-sign-up-page" element={<SignUpPage />} />
-      <Route path="/5-uploading-files" element={<MainPage1 />} />
+      <Route path="/5-uploading-files" element={<UploadFiles />} />
       <Route path="/leaderboard" element={<Leaderboard />} />
       <Route path="/social" element={<Social />} />
       <Route path="/8-customize-planning" element={<CustomizePlanning />} />
