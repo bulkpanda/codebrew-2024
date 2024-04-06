@@ -148,15 +148,16 @@
   object-fit: cover;
   z-index: 1;
 }
-.finished-my-jogging {
+.content-text {
   height: 163px;
   width: 61px;
   position: relative;
-  letter-spacing: -0.02em;
-  line-height: 150%;
+  letter-spacing: 0.02em;
+  line-height: 90%;
   display: inline-block;
   flex-shrink: 0;
   z-index: 1;
+  font-size: 13px;
 }
 .screenshot-2024-04-05-at-559-group {
   align-self: stretch;
@@ -273,30 +274,95 @@
   object-fit: cover;
   min-height: 60px;
 }
-.social,
 .square-border-parent {
+  width: 100%;
+  margin: 0 !important;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #eee;
   overflow: hidden;
   display: flex;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
-.square-border-parent {
-  align-self: stretch;
-  height: 74px;
-  background-color: var(--color-whitesmoke-100);
-  flex-shrink: 0;
   flex-direction: row;
+  align-items: flex-start;
   justify-content: space-between;
   padding: var(--padding-6xs) 0;
+  box-sizing: border-box;
   gap: var(--gap-xl);
 }
 .social {
   width: 100%;
-  position: relative;
-  background-color: var(--color-white);
+  position: static;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 27px 0 0;
-  gap: 31px;
+  padding: 0 0 67px;
+  box-sizing: border-box;
+  gap: 226px;
   letter-spacing: normal;
+}
+
+.rectangle-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f2f2f2; /* Light grey background */
+}
+
+.frame-child {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Adjust based on your layout */
+  max-width: 240px; /* Maximum width of the search area */
+  background-color: #fff; /* White background for the search input area */
+  border-radius: 20px; /* Rounded corners for the search area */
+  overflow: hidden; /* Ensures the inner elements do not overflow the rounded corners */
+}
+
+.search-input {
+  flex-grow: 1;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.search-icon {
+  width: 24px; /* Set the icon size */
+  height: 24px; /* Set the icon size */
+}
+
+/* Remove outline on focus for a cleaner look */
+.search-input:focus, .search-button:focus {
+  outline: none;
+}
+
+/* Optional: add a hover effect to the search button */
+.search-button:hover {
+  background-color: #e9e9e9; /* Light grey background on hover */
+}
+
+/* Post */
+.post-container {
+  display: flex-row;
+  align-items: center; /* Vertically center the content */
+  gap: 20px; /* Adds space between the image and the text */
+  margin-bottom: 20px; /* Space between posts, if you have multiple */
+}
+
+.post-image {
+  width: 150px; /* Adjust based on your needs */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: adds rounded corners to the image */
+}
+
+.post-content {
+  flex: 1; /* Allows the text content to fill the remaining space */
+  font-size: 16px; /* Adjust based on your needs */
 }
