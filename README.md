@@ -62,6 +62,9 @@ help from artificial intelligence, we managed to deliver a functional webapp fro
 3) Deploy a fine-tuned image labeling model with specific training on food for better food labelling.
 4) More user customization option on physical information to create more in person nutrient suggestion.
 
+## Figma webpage
+https://www.figma.com/file/SIcZVNTxvac2eCEhIybuNS/FOOD-APP?type=design&node-id=0-1&mode=design&t=4MSiolaG0jEb9kVC-0
+
 ## <a name="prevAndRun">Preview and Run the project</a>
 ### <a name="setupBackendENV">Setup Backend .env</a>
 1) Navigate to the **backend**
