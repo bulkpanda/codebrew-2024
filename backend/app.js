@@ -42,6 +42,7 @@ app.use(
       "http://127.0.0.1:5174",
       "http://localhost:5173",
       "http://localhost:5174",
+      'http://localhost:3000',
     ],
   })
 );
@@ -82,6 +83,7 @@ app.post("/openAI", async (req, res) => {
   }
 });
 
+
 const googleVis_apiKey = process.env.googleVis_apiKey;
 const { spawn } = require('child_process');
 app.post('/googleVision', upload.single('image'), async (req, res) => {
@@ -98,19 +100,19 @@ app.post('/googleVision', upload.single('image'), async (req, res) => {
   };
 
   // sending files to googleVision
-  const [result] = await visionClient.objectLocalization(request);
-  const objects = result.localizedObjectAnnotations;
-  // console.log(objects);
+  // const [result] = await visionClient.objectLocalization(request);
+  // const objects = result.localizedObjectAnnotations;
+  // // console.log(objects);
 
-  // processing responses from googleVison to json format
-  let names = "";
-  objects.forEach(object => {
-    names += object.name.toString();
-    names += "$"
-  });
+  // // processing responses from googleVison to json format
+  // let names = "";
+  // objects.forEach(object => {
+  //   names += object.name.toString();
+  //   names += "$"
+  // });
   
   // testing response from googleVision
-  // let names = 'Apple$Apple$Fruit$Fruit$Fruit$Fruit$Fruit$Peach$Orange$Orange$';
+  let names = 'Apple$Apple$Fruit$Fruit$Fruit$Fruit$Fruit$Peach$Orange$Orange$';
   // testing response from googleVision
 
   const pythonProcess = spawn('python', ['imageVision/readLabel.py'], {});

@@ -1,6 +1,6 @@
 import { FunctionComponent, useCallback, useRef } from "react";
-import FrameComponent2 from "../components/FrameComponent2";
 import { useNavigate } from "react-router-dom";
+import FrameComponent2 from "../components/FrameComponent2";
 import FrameComponent1 from "../components/FrameComponent1";
 import FrameComponent from "../components/FrameComponent";
 import "./UploadFiles.css";
@@ -8,56 +8,60 @@ import "./UploadFiles.css";
 const UploadFiles: FunctionComponent = () => {
   const navigate = useNavigate();
   const fileInputRef = useRef<HTMLInputElement>(null);
-  async function uploadFileToServer(file: File): Promise<any> {
-    const formData = new FormData();
-    formData.append('image', file); // 'image' is the key expected by the server for the file
-  
-    try {
-      const response = await fetch('your-backend-endpoint/upload', {
-        method: 'POST',
-        body: formData, 
-      });
-  
-      if (!response.ok) {
-        throw new Error(`Server responded with a status: ${response.status}`);
-      }
-  
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error("Error uploading file:", error);
-      throw error; // Ensure errors can be caught where the function is called.
-    }
-  }
-  
+
   const onUploadFoodFilesClick = useCallback(() => {
-    fileInputRef.current?.click();
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
   }, []);
-  
+
   const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) {
-      return;
+    const files = event.target.files;
+    if (files && files.length > 0) {
+      const file = files[0];
+      // console.log(file);
+      const formData = new FormData();
+      formData.append('image', file);
+      const url = 'http://127.0.0.1:8080/googleVision';
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (response.ok) {
+          // uploading file success
+          const data = await response.json();
+          sessionStorage.setItem('currentUserFoodList', JSON.stringify(data));
+          // const savedData = JSON.parse(sessionStorage.getItem('currentUserFoodList'));
+          
+          console.log('Upload successful', data);
+
+          navigate("/6-scanning-result");
+        } else {
+          console.error('Upload failed', response.statusText);
+        }
+      } catch (error) {
+        console.error('Upload error', error);
+      }
     }
-    try {
-      await uploadFileToServer(file);
-      navigate("/6-scanning-result");
-    } catch (error) {
-      console.error("File upload failed", error);
-    }
+
+
   };
 
   return (
     <div className="uploading-files">
       <FrameComponent2 />
       <section className="uploadbutton">
-      <input
-        type="file"
-        accept="image/*"
-        style={{ display: 'none' }}
-        ref={fileInputRef}
-        onChange={handleFileChange}
-      />
+        {/* hidden */}
+        <input
+          type="file"
+          ref={fileInputRef}
+          style={{ display: 'none' }}
+          onChange={handleFileChange}
+          accept="image/*" 
+          // capture 
+        />
         <img
           className="upload-food-files"
           loading="lazy"
